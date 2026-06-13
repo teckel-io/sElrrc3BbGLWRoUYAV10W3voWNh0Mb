@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-navy: #1f344d;
+            --accent-gold: #c1a164;
+            --bg-white: #ffffff;
+            --text-gray: #4a4a4a;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-white);
+            color: var(--primary-navy);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Gold accent bar consistent with Delapre site top border */
+        header {
+            width: 100%;
+            height: 4px;
+            background-color: var(--accent-gold);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 20px;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.2rem;
+            color: var(--primary-navy);
+            margin-bottom: 5px;
+            font-weight: 400;
+            letter-spacing: -1px;
+            line-height: 1.1;
+        }
+
+        p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--accent-gold);
+            margin-top: 0;
+            margin-bottom: 4.5rem;
+            font-weight: 500;
+        }
+
+        /* Widget container styling following the clean, high-end site aesthetic */
+        elevenlabs-convai {
+            box-shadow: 0 30px 60px -12px rgba(31, 52, 77, 0.12);
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid rgba(193, 161, 100, 0.2);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        elevenlabs-convai:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 40px 70px -15px rgba(31, 52, 77, 0.2);
+        }
+
+        /* Footer styling matching the navy/gold contrast of the reference site */
+        footer {
+            padding: 60px 0;
+            background-color: var(--primary-navy);
+            color: #ffffff;
+            width: 100%;
+            text-align: center;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 400;
+            border-top: 1px solid rgba(193, 161, 100, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 2.8rem;
+            }
+            p {
+                font-size: 0.75rem;
+                letter-spacing: 3px;
+                margin-bottom: 3rem;
+            }
+            .container {
+                padding: 80px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    
+    <div class="container">
+        <h2>Welcome!</h2>
+        <p>Your Virtual Concierge</p>
+        
+        <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+        <elevenlabs-convai agent-id="agent_7501k89tdz0jeb5a92fed8ep31cx"></elevenlabs-convai>
+    </div>
+
+    <footer>
+        &copy; teckel.io
+    </footer>
+</body>
+</html>
